@@ -1,0 +1,39 @@
+﻿
+@model SignalRChat.Models.IndexViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-2">
+            User:
+        </div>
+        <div class="col-10">
+            <input type="text" value="@Model.Name" id="userInput" />
+        </div>
+        <div class="col-2">
+            Message:
+        </div>
+        <div class="col-10">
+            <input type="text" value="@Model.Message" id="messageInput" />
+        </div>
+        <div class="col-2"></div>
+        <div class="col-10">
+            <input style="float:left" type="button" id="btnSend" value="Send" />
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
